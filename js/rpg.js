@@ -40,8 +40,15 @@ export class Game {
     {
       if(item == "C# Knife")
       {
-        boss.hp = boss.hp - player.atk - 3;
-        player.energy -= 2;
+        if(player.energy < 2)
+        {
+          boss.hp = boss.hp - player.atk;
+        }
+        else
+        {
+          boss.hp = boss.hp - player.atk - 3;
+          player.energy -= 2;
+        }
       }
       else if (item == "Magic Ruby")
       {
