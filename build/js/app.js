@@ -102,7 +102,7 @@ var player = { level: 1, hp: 5, atk: 1, energy: 3, track: "", item: [] };
 var boss1 = { name: "Coding Dojo Disciple", hp: 4, atk: 1 };
 var boss2 = { name: "Cyber Bully", hp: 8, atk: 2 };
 var boss3 = { name: "Interviewer", hp: 12, atk: 3 };
-var boss4 = { name: "Drill Instructor John", hp: 100, atk: 500 };
+var boss4 = { name: "Drill Instructor John", hp: 100, atk: 999 };
 
 var cSharpKnife = { name: "C# Knife", atk: +3, energy: -2 };
 var cascadingShirt = { name: "Cascading Style Shirt", hp: +2 };
@@ -122,10 +122,16 @@ $(document).ready(function () {
     if (turn == 1) {
       fightBoss = boss1;
     } else if (turn == 2) {
+      $("#page4").show();
+      $("#page3").hide();
       fightBoss = boss2;
     } else if (turn == 3) {
+      $("#page5").show();
+      $("#page3").hide();
       fightBoss = boss3;
     } else if (turn == 4) {
+      $("#page6").show();
+      $("#page3").hide();
       fightBoss = boss4;
     }
 
@@ -144,6 +150,8 @@ $(document).ready(function () {
 
     $(".class-choice").hide();
     $("#fightForm").show();
+    $("#page1").hide();
+    $("#page2").show();
     $("#p1level").text(player.level);
     $("#p1hp").text(player.hp);
     $("#p1atk").text(player.atk);
@@ -172,6 +180,23 @@ $(document).ready(function () {
       turn += 1;
       $("#fightForm").show();
       $(".attack-choice").hide();
+      $("#page2").hide();
+      $("#page3").hide();
+      $("#page4").hide();
+      $("#page5").hide();
+      if (turn == 2) {
+        $("#page3").show();
+        $("#page2").hide();
+      } else if (turn == 3) {
+        $("#page4").hide();
+        $("#page3").show();
+      } else if (turn == 4) {
+        $("#page5").hide();
+        $("#page3").show();
+      } else {
+        $("#page6").hide();
+        $("#page7").show();
+      }
     } else {
       player.hp = thisGame.AtkPlayer(player.hp, fightBoss.atk);
       if (player.hp <= 0) {

@@ -1,34 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="build/css/vendor.css" type="text/css">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <script src="build/js/vendor.min.js"></script>
-    <script type="text/javascript" src="build/js/app.js"></script>
-    <title>Bootcamp RPG</title>
-  </head>
-  <body>
-    <div class="row">
-      <div class="col-md-6">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="build/css/vendor.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="build/js/vendor.min.js"></script>
+  <script type="text/javascript" src="build/js/app.js"></script>
+  <title>Bootcamp RPG</title>
+</head>
+<body>
 
-        <div id="result">
-          <h2>Level: <span id="p1level"></span></h2>
-          <h2>Hitpoints: <span id="p1hp"></span></h2>
-          <h2>Attack: <span id="p1atk"></span></h2>
-          <h2>Energy: <span id="p1energy"></span></h2>
-          <h2>Class: <span id="p1class"></span></h2>
-          <h2>Inventory:</h2>
-          <ul id = "p1inv">
-          </ul>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="page1">
+        <h1>Intro</h1>
+        <p>At school you're continuously harassed and abused for not knowing how to program.
+          You've decided that enough is enough and it is time to enroll in a bootcamp to defend yourself.</p>
+          <h3>Select your track</h3>
         </div>
-
-        <div id="fightForm">
-          <form id="fightButton">
-            <button type="click" class="btn btn-danger">Fight</button>
-          </form>
-        </div>
-
         <div class="class-choice">
           <form id="formOne">
             <div class="form-group">
@@ -45,27 +34,85 @@
             </div>
           </form>
         </div>
-        <div class = "attack-choice">
-          <form id="attackForm">
-            <div class="form-group">
-              <label for="input">Choose your Attack</label>
-              <br>
-              <select class="form-control" id="attack">
-                <option value="Attack">Attack</option>
-              </select>
-              <button type="submit" class="btn btn-danger">Attack</button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div id="bossinfo">
-          <h2>Boss Name: <span id="bossName"></span></h2>
-          <h2>Hitpoints: <span id="bossHp"></span></h2>
-          <h2>Attack: <span id="bossAtk"></span></h2>
-        </div>
-      </div>
-    </div>
+        <div id="page2">
+          <h1>Track selected</h1>
+          <p>On your first day of school another student you met at the bus stop says that their bootcamp is better than yours.
+            He says that your code is weak and that you will never become a web developer.  Defend yourself!</p>
+            <img src="daniel.png" width=150px></img>
+          </div>
+          <div id="page3">
+            <h1>You win!</h1>
+            <p>Wow.  You just won your very first coding battle, amazing.</p>
+          </div>
+          <div id="page4">
+            <h1>Facebook Bully</h1>
+            <p>At school you get incessantly picked on for having an older laptop/macbook.  The other children make fun of you for having a smaller hard drive and a weak GPU.</p>
+            <p>It's time to show them your new powers, sometimes the kid with the weaker processor is the best player on the course!</p>
+          </div>
+          <div id="page5">
+            <h1>Rude Interviewer</h1>
+            <p>You have finally gotten your first interview, you've never been more excited in your life you step into their office.</p>
+            <p>Interviewer : "Omg it smells like dogshit in here all of a sudden that must be the interviewee!"</p>
+            <p>You start to become self conscious and sweat, you start to question if perhaps not taking a shower in two years was a bad idea.  No of course it wasn't the human body doesn't need to shower because it only strips your hair away from it's precious oils.  Time to teach this guy a lesson.</p>
+          </div>
+          <div id="page6">
+            <h1>Coach John</h1>
+            <p>Beaming with pride after your first interview you walk back to bootcamp with a brisk step to inform all of your fellow classmates about your last conquest</p>
 
-  </body>
-</html>
+            <p>Drill Instructor John greets you at the door</p>
+
+            <p>John:"Welcome back student!  How was the interview I hope everything went well." He says with a smile.</p>
+
+            <p>You scoff at his politeness and say "Ha nobody is better than me at coding I've been programming for 20 weeks I know everything!"</p>
+
+            <p>John:"I like your enthusiasm keep up the great work!"</p>
+
+            <p>You scream back at him<h1>"NOBODY TELLS ME WHAT TO DO!"</h1></p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+
+          <div id="result">
+            <h2>Level: <span id="p1level"></span></h2>
+            <h2>Hitpoints: <span id="p1hp"></span></h2>
+            <h2>Attack: <span id="p1atk"></span></h2>
+            <h2>Energy: <span id="p1energy"></span></h2>
+            <h2>Class: <span id="p1class"></span></h2>
+            <h2>Inventory:</h2>
+            <ul id = "p1inv">
+            </ul>
+          </div>
+
+          <div id="fightForm">
+            <form id="fightButton">
+              <button type="click" class="btn btn-danger">Fight</button>
+            </form>
+          </div>
+
+
+          <div class = "attack-choice">
+            <form id="attackForm">
+              <div class="form-group">
+                <label for="input">Choose your Attack</label>
+                <br>
+                <select class="form-control" id="attack">
+                  <option value="Attack">Attack</option>
+                </select>
+                <button type="submit" class="btn btn-danger">Attack</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div id="bossinfo">
+            <h2>Boss Name: <span id="bossName"></span></h2>
+            <h2>Hitpoints: <span id="bossHp"></span></h2>
+            <h2>Attack: <span id="bossAtk"></span></h2>
+          </div>
+        </div>
+      </div>
+
+    </body>
+    </html>
